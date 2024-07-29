@@ -6,7 +6,7 @@ from tqdm import tqdm
 from assets import DQNAgent, device
 
 def main(args):
-    env = gym.make('LunarLander-v2', render_mode='human')
+    env = gym.make('LunarLander-v2', render_mode=None)
     state_size = env.observation_space.shape[0]
     
     if isinstance(env.action_space, gym.spaces.Discrete):
@@ -69,7 +69,7 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--episodes', type=int, default=100, help='Number of episodes to train the agent')
+    parser.add_argument('--episodes', type=int, default=300, help='Number of episodes to train the agent')
     parser.add_argument('--eps_start', type=float, default=0.9, help='Starting value of epsilon for epsilon-greedy policy')
     parser.add_argument('--eps_end', type=float, default=0.05, help='Ending value of epsilon for epsilon-greedy policy')
     parser.add_argument('--eps_decay', type=int, default=200, help='Epsilon decay factor')

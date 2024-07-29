@@ -1,6 +1,6 @@
-gymnasium == 0.29.1
-numpy == 1.26.4
-tqdm == 4.66.1
+gymnasium 
+numpy 
+tqdm 
 torch
 matplotlib
 gymnasium[box2d]
